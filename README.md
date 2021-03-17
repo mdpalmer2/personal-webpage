@@ -1,5 +1,9 @@
 # personal-webpage
 
+## 3/15/21
+## update vue: npm i -g @vue/cli
+
+
 ## Project setup
 ```
 npm install
