@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id='#app'>
     <span>Matthew Palmer's Sweet Website</span>
     <nav class='option-bar'>
       <ul width='100%'>
@@ -9,18 +9,11 @@
         <li @click='setShow("About")' :style='{"background-color": show ==="About" ? "green" : "gray"}'>About</li>
       </ul>
     </nav>
-    <home v-if='show === "Home"'>This is Home</home>
-    <blog v-if='show === "Blog"'>This is Blog</blog>
-    <resume v-if='show === "Resume"'>This is Resume</resume>
-    <about v-if='show === "About"'></about>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import About from './components/About.vue'
-import Resume from './components/Resume.vue'
-import Home from './components/Home.vue'
-import Blog from './components/Blog.vue'
 
 export default {
   name: 'App',
@@ -28,12 +21,6 @@ export default {
     return {
       show: 'Home',
     }
-  },
-  components: {
-    'about': About,
-    'resume': Resume,
-    'home': Home,
-    'blog': Blog,
   },
   methods: {
     setShow(name) {
@@ -48,9 +35,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   /* -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-  text-align: center;
   /* background-color: #d1e0ab; */
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .option-bar {
   list-style-type: none;

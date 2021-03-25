@@ -61,7 +61,6 @@
         <h2>Contact Information</h2>
         <ul>
           <li><strong>Email</strong>: <a href="mailto:mdpalmer2@wisc.edu">mdpalmer2@wisc.edu</a></li>
-          <li><strong>Cell</strong>: <a href="tel:+610-717-8120">610-717-8120</a></li>
         </ul>
       </section>
     </article>

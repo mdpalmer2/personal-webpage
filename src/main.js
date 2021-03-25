@@ -1,8 +1,25 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router'; // , createWebHistory
+// Vue.config.productionTip = false;
 
-Vue.config.productionTip = false
+import App from './App.vue';
+import About from './components/About.vue';
+import Blog from './components/Blog.vue';
+import Resume from './components/Resume.vue';
+Vue.use(VueRouter)
 
-new Vue({
+const router = new VueRouter({
+  // history: createWebHistory(),
+  routes: [
+    {path: '/About', component: About},
+    {path: '/Blog', component: Blog},
+    {path: '/Resume', component: Resume},
+  ]
+});
+
+const app = new Vue({
   render: h => h(App),
-}).$mount('#app')
+  router,
+});
+
+app.$mount('#app');
