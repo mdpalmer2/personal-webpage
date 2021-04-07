@@ -6,14 +6,17 @@ import App from './App.vue';
 import About from './components/About.vue';
 import Blog from './components/Blog.vue';
 import Resume from './components/Resume.vue';
+import Home from './components/Home.vue'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
-  // history: createWebHistory(),
+  mode: 'history',
+  base: __dirname,
   routes: [
     {path: '/About', component: About},
     {path: '/Blog', component: Blog},
     {path: '/Resume', component: Resume},
+    {path: '/', component: Home}
   ]
 });
 
